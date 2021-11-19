@@ -32,3 +32,14 @@ test {
      ignoreFailures = true
      useJUnitPlatform()
 }
+task reports (dependsOn: ['javadoc', 'check']) {
+    description 'Generate all reports for this project'
+}
+
+task deployReports (dependsOn: javadoc, type: Copy) {  
+    from 'build/reports'
+    into  'reports/'
+    from 'build/reports/docs'
+    into 'docs/'
+    
+}
