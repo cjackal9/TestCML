@@ -2,5 +2,5 @@
 
 Christian Jackson
 
-* [Tests](gh-pages/reports/tests/test/)
-* [JavaDoc](gh-pages/docs/javadoc/)
+* [Tests](TestCML/gh-pages/reports/tests/test/)
+* [JavaDoc](TestCML/gh-pages/docs/javadoc/)
