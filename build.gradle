@@ -43,17 +43,17 @@ jar {
     manifest {
         attributes 'Main-Class': 'edu.odu.cs.cs350.CommandLineProcessor'
     }
-	baseName 'DupDetector'
+baseName 'DupDetector'
 }
 
  task copyDocs (type: Copy) {            
     from 'build/docs'
-    into 'TestCML/reports/tests/test/'
+    into '/gh-pages/reports/tests/test'
 }
 
 task copyReports (type: Copy) {
     from 'build/reports'
-    into 'TestCML/docs/javadoc/'
+    into '/gh-pages/docs/javadoc'
 }
 task deployReports(dependsOn: ['copyDocs', 'copyReports']) {
     description 'Generate reports website for this project'
