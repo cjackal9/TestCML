@@ -48,12 +48,12 @@ baseName 'DupDetector'
 
  task copyDocs (type: Copy) {            
     from 'build/docs'
-    into 'TestCML/gh-pages/reports/tests/test'
+    into 'build/gh-pages/reports/tests/test'
 }
 
 task copyReports (type: Copy) {
     from 'build/reports'
-    into 'TestCML/gh-pages/docs/javadoc'
+    into 'build/gh-pages/docs/javadoc'
 }
 task deployReports(dependsOn: ['copyDocs', 'copyReports']) {
     description 'Generate reports website for this project'
